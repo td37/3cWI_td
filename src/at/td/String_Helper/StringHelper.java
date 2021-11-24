@@ -1,9 +1,13 @@
 package at.td.String_Helper;
 
+import java.util.Scanner;
+
 public class StringHelper {
 
     public static void main(String[] args) {
-        StringHelper.getAmountOfLetters("Hansi");
+        //StringHelper.getAmountOfLetters();
+
+        StringHelper.reverseString();
 
     }
 
@@ -20,14 +24,24 @@ public class StringHelper {
         return -1;
     }
 
-    public static String reverseString(String text) {
+    public static String reverseString() {
+        System.out.println("Bitte gib ein Wort ein.");
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.next();
+        char word[] = new char[input.length()];
+        for (int i = input.length(); i > -1; i--) {
+            i = i-1;
+            System.out.println(word[i]);
+        }
         return "";
     }
 
-    public static int getAmountOfLetters(String text) {
-
-        char word[] = new char[text.length()];
-        System.out.println(text.length());
+    public static int getAmountOfLetters() {
+        System.out.println("Bitte gib ein Wort ein.");
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.next();
+        char word[] = new char[input.length()];
+        System.out.println(input.length());
         return -1;
     }
 }
