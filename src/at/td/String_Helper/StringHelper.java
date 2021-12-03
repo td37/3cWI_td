@@ -2,9 +2,22 @@ package at.td.String_Helper;
 
 import java.util.Scanner;
 
+
 public class StringHelper {
 
     public static void main(String[] args) {
+
+        //countLetters
+        System.out.println("Bitte gib einen Satz und einen Buchstaben ein, von dem du wissen möchtest, wie oft er darin vorkommt.");
+        Scanner inputToCount = new Scanner(System.in);
+        String sentenceToCountLetters = inputToCount.nextLine();
+
+        Scanner character = new Scanner(System.in);
+        char characterToCount = character.next().charAt(0);
+
+
+        int amountCharacter = countLetters(sentenceToCountLetters, characterToCount);
+        System.out.println(amountCharacter);
 
         //isPalindrome
         System.out.println("Bitte gib ein Wort ein, von dem du wissen möchtest, ob man es von vorne oder hinten lesen kann.");
@@ -67,31 +80,22 @@ public class StringHelper {
         }
     }
 
-    public static int countLetters(String text, char number) {
-        letters();
-        System.out.println("Bitte gib ein Wort ein, von dem du wissen möchtest, von welchem Buchstabe wie viele vorhanden sind.");
-        Scanner countLetters = new Scanner(System.in);
-        String wordToCountLetters = countLetters.next();
-        char lettersFromWord[] = new char[wordToCountLetters.length()];
-        lettersFromWord = wordToCountLetters.toCharArray();
+    public static int countLetters(String sentenceToCountLetters, char characterToCount) {
+        char sentence[] = new char[sentenceToCountLetters.length()];
+        sentence = sentenceToCountLetters.toCharArray();
 
-        char[] letters = new char[26];
 
-        int lettersFromTheAlphabet = 0;
+        int amountOfsearchedCharachter = 0;
 
-        for (int i = 0; i <= 26; i++) {
-            for (int j = 0; j < ; j++) {
-                if (letters[i] = lettersFromWord[j]){
-                    letters[lettersFromTheAlphabet] = Character.valueOf(i);
-                    lettersFromTheAlphabet++;
-                }
+        for (int i = 0; i < sentence.length; i++) {
+            if (sentence[i] == characterToCount) {
+                amountOfsearchedCharachter = amountOfsearchedCharachter + 1;
             }
-
-
         }
 
-        return -1;
+        return amountOfsearchedCharachter;
     }
+
 
     public static String reverseString(String wordUserWantsBackwards) {
         letters();
