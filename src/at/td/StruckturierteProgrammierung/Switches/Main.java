@@ -1,4 +1,4 @@
-package at.td.Switches;
+package at.td.StruckturierteProgrammierung.Switches;
 
 import java.util.Random;
 

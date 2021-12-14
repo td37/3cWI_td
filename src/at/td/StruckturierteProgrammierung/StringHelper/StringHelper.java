@@ -1,4 +1,4 @@
-package at.td.String_Helper;
+package at.td.StruckturierteProgrammierung.String_Helper;
 
 import java.util.Scanner;
 
@@ -6,18 +6,6 @@ import java.util.Scanner;
 public class StringHelper {
 
     public static void main(String[] args) {
-
-        //countLetters
-        System.out.println("Bitte gib einen Satz und einen Buchstaben ein, von dem du wissen möchtest, wie oft er darin vorkommt.");
-        Scanner inputToCount = new Scanner(System.in);
-        String sentenceToCountLetters = inputToCount.nextLine();
-
-        Scanner character = new Scanner(System.in);
-        char characterToCount = character.next().charAt(0);
-
-
-        int amountCharacter = countLetters(sentenceToCountLetters, characterToCount);
-        System.out.println(amountCharacter);
 
         //isPalindrome
         System.out.println("Bitte gib ein Wort ein, von dem du wissen möchtest, ob man es von vorne oder hinten lesen kann.");
@@ -32,6 +20,15 @@ public class StringHelper {
         }
 
         //countLetters
+        System.out.println("Bitte gib einen Satz und einen Buchstaben ein, von dem du wissen möchtest, wie oft er darin vorkommt.");
+        Scanner inputToCount = new Scanner(System.in);
+        String sentenceToCountLetters = inputToCount.nextLine();
+
+        Scanner character = new Scanner(System.in);
+        char characterToCount = character.next().charAt(0);
+
+        int amountCharacter = countLetters(sentenceToCountLetters, characterToCount);
+        System.out.println("Dein ausgewählter Buchstabe kommt " + amountCharacter + " vor");
 
 
         //reverseString

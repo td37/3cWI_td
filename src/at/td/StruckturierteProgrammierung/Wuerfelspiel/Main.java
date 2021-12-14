@@ -1,4 +1,4 @@
-package at.td.Würfelspiel;
+package at.td.StruckturierteProgrammierung.Würfelspiel;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package at.td.if_Bedingungen;
+package at.td.StruckturierteProgrammierung.IfConditions;
 
 import java.util.Random;
 
