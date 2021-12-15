@@ -1,6 +1,5 @@
-package at.td.Bankomat;
+package at.td.StruckturierteProgrammierung.Bankomat;
 
-import java.util.Random;
 import java.util.Scanner;
 
 //1. Einzahlen

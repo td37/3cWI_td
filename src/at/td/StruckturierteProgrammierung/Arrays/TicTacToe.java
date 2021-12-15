@@ -1,4 +1,4 @@
-package at.td.Arrays;
+package at.td.StruckturierteProgrammierung.Arrays;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package at.td.schoolcheck;
+package at.td.StruckturierteProgrammierung.schoolcheck;
 import java.util.Scanner;
 import java.util.Random;
 
