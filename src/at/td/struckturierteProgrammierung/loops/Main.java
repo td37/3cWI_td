@@ -1,4 +1,4 @@
-package at.td.StruckturierteProgrammierung.Loops;
+package at.td.struckturierteProgrammierung.loops;
 
 import java.util.Random;
 /*

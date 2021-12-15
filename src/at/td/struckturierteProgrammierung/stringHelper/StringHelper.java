@@ -1,4 +1,4 @@
-package at.td.StruckturierteProgrammierung.StringHelper;
+package at.td.struckturierteProgrammierung.stringHelper;
 
 import java.util.Scanner;
 

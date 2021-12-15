@@ -1,4 +1,4 @@
-package at.td.StruckturierteProgrammierung.Bankomat;
+package at.td.struckturierteProgrammierung.cashMachine;
 
 import java.util.Scanner;
 
