@@ -44,6 +44,7 @@ public class Car {
         System.out.println("Du kannst noch " + remainingRange + " km fahren.");
     }
 
+
     public int getFuelConsumption() {
         return fuelConsumption;
     }

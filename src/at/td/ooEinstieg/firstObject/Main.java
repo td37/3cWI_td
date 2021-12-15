@@ -21,9 +21,21 @@ public class Main {
 
          */
 
+        Car c1 = new Car(6,"Ford","F1234");
+
+        Car c2 = new Car(5,"BMW","B1234");
+
         Car c3 = new Car(4,"Mercedes","M1234");
 
+
+
         System.out.println(c3.getSerialNumber());
+
+        c3.setColor("green");
+        c3.getColor();
+
+        System.out.println(c1.getBrand());
+        System.out.println(c3.getColor());
 
         /*
         c1.breaking();
