@@ -2,23 +2,21 @@ package at.td.ooEinstieg.firstObject;
 
 public class Car {
 
+    private Engine engine;
+    private Tank tank;
     private int fuelConsumption;
-    private int tankVolume;
     private int fuelAmount;
     private String brand;
     private String serialNumber;
     private String color;
 
-    public Car(int fuelConsumption, String brand, String serialNumber) {
+
+    public Car(Engine engine, Tank tank, int fuelConsumption, String brand, String serialNumber) {
+        this.engine = engine;
+        this.tank = tank;
         this.fuelConsumption = fuelConsumption;
         this.brand = brand;
         this.serialNumber = serialNumber;
-    }
-
-    public void drive() {
-
-        this.fuelConsumption = this.fuelConsumption - this.fuelAmount;
-        System.out.println("Ich bin gefahren und verbrauche Treibstoff.");
     }
 
     public void breaking() {
@@ -26,7 +24,7 @@ public class Car {
     }
 
     public void turboBoost() {
-        double turboBoost = this.tankVolume * 0.1;
+        double turboBoost = this.tank.getVolume() * 0.1;
 
         if (this.fuelAmount >= turboBoost) {
             System.out.println("SuperBoostMode");
@@ -53,13 +51,6 @@ public class Car {
         this.fuelConsumption = fuelConsumption;
     }
 
-    public int getTankVolume() {
-        return tankVolume;
-    }
-
-    public void setTankVolume(int tankVolume) {
-        this.tankVolume = tankVolume;
-    }
 
     public int getFuelAmount() {
         return fuelAmount;
@@ -91,5 +82,22 @@ public class Car {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+
+    public Engine getEngine() {
+        return engine;
+    }
+
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public Tank getTank() {
+        return tank;
+    }
+
+    public void setTank(Tank tank) {
+        this.tank = tank;
     }
 }
