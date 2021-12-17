@@ -10,42 +10,16 @@ public class Main {
         c1.brand = "Ford";
         c1.serialNumber = "F1234";
         c1.color = "türkis";
-
-        Car c2 = new Car();
-        c2.fuelConsumption = 5;
-        c2.tankVolume = 50;
-        c2.fuelAmount = 23;
-        c2.brand = "BMW";
-        c2.serialNumber = "B1234";
-        c2.color = "blau";
-
          */
+        Engine e1 = new Engine(50, Engine.TYPE.GAS, 60);
+        Engine e2 = new Engine(90, Engine.TYPE.GAS, 23);
+        Tank t1 = new Tank(50);
 
-        Car c1 = new Car(6, "Ford", "F1234");
+        Car c1 = new Car(e2, t1,5,"mercedes","123");
+        System.out.println(c1.getEngine().getSpeed());
 
-        Car c2 = new Car(5, "BMW", "B1234");
-
-        Car c3 = new Car(4, "Mercedes", "M1234");
+        e1.drive();
 
 
-        System.out.println(c3.getSerialNumber());
-
-        c3.setColor("green");
-        c3.getColor();
-
-        System.out.println(c1.getBrand());
-        System.out.println(c3.getColor());
-
-        /*
-        c1.breaking();
-
-        c1.turboBoost();
-        c2.turboBoost();
-
-        c1.honk(3);
-
-        c2.getRemainingRange();
-
-         */
     }
 }
