@@ -75,3 +75,6 @@ public class Main {
         System.out.println("Wer soll beginnen? Tippe eine 1 für dich oder eine 2 für den Computer!");
     }
 }
+
+
+
