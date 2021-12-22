@@ -13,6 +13,8 @@ public class Tire {
         this.type = type;
     }
 
+    //public void
+
     public int getRimDiameter() {
         return rimDiameter;
     }
