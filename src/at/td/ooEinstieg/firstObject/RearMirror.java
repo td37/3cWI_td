@@ -9,6 +9,19 @@ public class RearMirror {
         this.position = position;
     }
 
+    public void queryPositionOfRearMirror() {
+        if (this.position == 0){
+            System.out.println("Der Rückspiegel ist in neutraler Position.");
+        }
+        else if(this.position >= -10 && this.position < 0){
+            System.out.println("Der Rückspiegel ist nach links verschoben.");
+        }
+        else if(this.position <= 10 && this.position > 0){
+            System.out.println("Der Rückspiegel ist nach rechts verschoben");
+        }
+        else System.out.println("Der Rückspiegel ist in einer nicht möglichen Position");
+    }
+
     public int getSize() {
         return size;
     }
