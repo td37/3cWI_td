@@ -1,8 +1,12 @@
 package at.td.ooEinstieg.firstObject;
 
+import java.util.ArrayList;
+
 public class Car {
 
     private Engine engine;
+    private List<RearMirror> mirrors;
+    private List<Tire> tires;
     private Tank tank;
     private int fuelConsumption;
     private int fuelAmount;
@@ -11,12 +15,31 @@ public class Car {
     private String color;
 
 
-    public Car(Engine engine, Tank tank, int fuelConsumption, String brand, String serialNumber) {
+    public Car(Engine engine, Tank tank,  int fuelConsumption, String brand, String serialNumber) {
         this.engine = engine;
         this.tank = tank;
         this.fuelConsumption = fuelConsumption;
         this.brand = brand;
         this.serialNumber = serialNumber;
+        this.mirrors = new ArrayList<>();
+        this.tires = new ArrayList<>();
+    }
+
+
+    public void addMirrors(RearMirror rearMirror) {
+        this.mirrors.add(rearMirror);
+    }
+
+    public List<RearMirror> getMirrors() {
+        return mirrors;
+    }
+
+    public void addTires(Tire tires) {
+        this.tires.add(tires);
+    }
+
+    public List<Tire> getTires() {
+        return tires;
     }
 
     public void breaking() {
