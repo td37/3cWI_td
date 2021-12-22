@@ -30,9 +30,10 @@ public class Main {
         c1.addTires(tr3);
         c1.addTires(tr4);
 
-        System.out.println(c1.getTires().get(0).getProfileThickness);
+        System.out.println(c1.getTires().get(0).getProfileThickness());
         System.out.println(c1.getEngine().getSpeed());
 
         e1.drive();
+        r1.queryPositionOfRearMirror();
     }
 }
