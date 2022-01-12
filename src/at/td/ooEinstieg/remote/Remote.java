@@ -6,7 +6,7 @@ import java.util.List;
 public class Remote {
     private List<Battery> batteries;
 
-    public Remote(Battery battery){
+    public Remote() {
         this.batteries = new ArrayList<>();
     }
 
@@ -14,7 +14,7 @@ public class Remote {
         this.batteries.add(battery);
     }
 
-    public void getStatus(){
-
+    public void getStatus() {
+        int averageChargingLevel = (this.batteries.get(0) + this.batteries.get(1)) / 2;
     }
 }
