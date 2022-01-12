@@ -35,5 +35,7 @@ public class Main {
 
         e1.drive();
         r1.queryPositionOfRearMirror();
+        tr2.movingForward();
+
     }
 }
