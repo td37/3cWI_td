@@ -13,7 +13,9 @@ public class Tire {
         this.type = type;
     }
 
-    //public void
+    public void movingForward () {
+        System.out.println("They see me rollin', they hatin'");
+    };
 
     public int getRimDiameter() {
         return rimDiameter;
