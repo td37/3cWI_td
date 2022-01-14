@@ -15,6 +15,29 @@ public class Remote {
     }
 
     public void getStatus() {
-        int averageChargingLevel = (this.batteries.get(0) + this.batteries.get(1)) / 2;
+        int numberOfBatteries = this.batteries.size();
+        int sumChargingLevel = 0;
+        for (int i = 0; i < numberOfBatteries; i++) {
+            sumChargingLevel = sumChargingLevel + this.batteries.get(i).getChargingLevel();
+        }
+        int averageChargingLevel = sumChargingLevel / numberOfBatteries;
+        System.out.println("Die Batterien haben durchschnittlich " + averageChargingLevel + "%");
+    }
+
+    public void turnOn() {
+        int numberOfBatteries = this.batteries.size();
+        for (int i = 0; i < numberOfBatteries; i++) {
+            int newChargingLevel = this.batteries.get(i).getChargingLevel() - 5;
+            this.batteries.get(i).setChargingLevel(newChargingLevel);
+            System.out.println(this.batteries.get(i).getChargingLevel());
+            System.out.println("Verbraucher angeschlossen");
+        }
+    }
+
+    public void turnOff() {
+        int numberOfBatteries = this.batteries.size();
+        for (int i = 0; i < numberOfBatteries; i++) {
+            System.out.println("kein Verbraucher angeschlossen");
+        }
     }
 }

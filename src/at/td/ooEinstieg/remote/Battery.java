@@ -10,4 +10,8 @@ public class Battery {
     public int getChargingLevel() {
         return chargingLevel;
     }
+
+    public void setChargingLevel(int chargingLevel) {
+        this.chargingLevel = chargingLevel;
+    }
 }
