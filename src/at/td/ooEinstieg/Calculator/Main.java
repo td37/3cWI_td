@@ -2,8 +2,11 @@ package at.td.ooEinstieg.Calculator;
 
 public class Main {
     public static void main(String[] args) {
-        basicCalculator b1 = new basicCalculator("dark blue");
+        basicCalculator bC1 = new basicCalculator("dark blue");
 
-        b1.subtract();
+        bC1.add(2, 5);
+        bC1.subtract(2, 5);
+        bC1.multiply(2, 5);
+        bC1.divide(10, 5);
     }
 }
