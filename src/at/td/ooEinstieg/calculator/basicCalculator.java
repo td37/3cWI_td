@@ -1,4 +1,4 @@
-package at.td.ooEinstieg.Calculator;
+package at.td.ooEinstieg.calculator;
 
 public class basicCalculator {
     private String color;
