@@ -17,5 +17,6 @@ public class Main {
 
         le1.turnOn();
         le2.turnOn();
+
     }
 }
