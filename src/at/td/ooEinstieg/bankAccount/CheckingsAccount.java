@@ -13,5 +13,6 @@ public class CheckingsAccount extends BaseAccount{
     public void accountInterest(){
         double accountInterest = (this.getBalance() * this.rateOfInterest) * this.membershipYears;
         System.out.println("Du hast über die letzten " + this.membershipYears + " Jahre " + accountInterest + " Zinsen gezahlt.");
+        setBalance(getBalance()-accountInterest);
     }
 }
