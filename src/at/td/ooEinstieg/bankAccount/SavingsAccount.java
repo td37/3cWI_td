@@ -14,6 +14,7 @@ public class SavingsAccount extends BaseAccount{
     public void accountInterest(){
         double accountInterest = (this.getBalance() * this.rateOfInterest) * this.savingYears;
         System.out.println("Du hast in den letzten " + this.savingYears + " Jahren " + accountInterest + "€ Zinsen erhalten.");
+        setBalance(getBalance()+accountInterest);
     }
 
     public double getSavingYears() {
