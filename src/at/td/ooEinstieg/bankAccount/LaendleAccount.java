@@ -15,6 +15,7 @@ public class LaendleAccount extends BaseAccount {
             accountKeepingCosts = accountKeepingCosts + this.accountManagement;
         }
         System.out.println("Dein Ländlegirokonto kostete dich seit deiner Kontoeröffnung " + accountKeepingCosts + "€");
+        setBalance(getBalance()-accountKeepingCosts);
     }
 
     public double getMembershipYears() {
