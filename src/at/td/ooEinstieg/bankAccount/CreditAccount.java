@@ -21,6 +21,7 @@ public class CreditAccount extends BaseAccount{
         else{
             creditCosts = (-this.getBalance() * this.loanInterest) * this.loanMonths;
             System.out.println("Du musst " + creditCosts + "€ Kreditzinsen zahlen.");
+            setBalance(getBalance()-creditCosts);
         }
     }
 
