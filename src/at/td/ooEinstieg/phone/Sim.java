@@ -9,6 +9,10 @@ public class Sim {
         this.number = number;
     }
 
+    public void doCall(String number){
+        System.out.println("Calling " + number);
+    }
+
     public int getId() {
         return id;
     }
