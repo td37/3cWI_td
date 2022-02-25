@@ -18,8 +18,9 @@ public class Box {
     }
 
     public void searchRecord(String recordTitle){
-        System.out.println("Die gesuchte Platte hat die Stelle " + this.magazine.searchRecord(recordTitle) + "im Magazin.");
+        System.out.println("Die gesuchte Platte hat die Stelle " + this.magazine.searchRecord(recordTitle) + " im Magazine.");
     }
+
 
     public String getName() {
         return name;

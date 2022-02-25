@@ -16,7 +16,7 @@ public class Record {
         this.songList = new ArrayList<>();
     }
 
-    public void addSongs (Song songList){
+    public void addSong (Song songList){
         this.songList.add(songList);
     }
 

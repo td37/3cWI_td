@@ -9,17 +9,21 @@ public class Magazine {
     private int capacity = 50;
     private List<Record> records;
 
+    public Magazine() {
+        this.records = new ArrayList<>();
+    }
+
     public Magazine(int capacity) {
         this.capacity = capacity;
         this.records = new ArrayList<>();
     }
 
-    public void addRecords(Record record) {
+    public void addRecord(Record record) {
         if (this.capacity > this.records.size()) {
             this.records.add(record);
             System.out.println("Die Schallplatte wurde hinzugefüht.");
         } else {
-            System.out.println("Es sind bereits 50 Schallplatten in der Musikbox");
+            System.out.println("Es sind bereits " + this.capacity + " Schallplatten in der Musikbox");
         }
 
     }
@@ -40,14 +44,25 @@ public class Magazine {
     }
 
     public int searchRecord(String recordTitle) {
-        int recordPosition = 0;
-        int foundRecordPosition = -1;
-        for (int i = this.records.size(); i > -1 ; i--) {
+        int recordListSize = this.records.size();
+        int foundRecordPosition = 0;
+        for (int i = 0; i < recordListSize ; i++) {
 
-            if (recordTitle == this.records.get(recordPosition).getName()) {
-                 foundRecordPosition = recordPosition;
+            if (recordTitle == this.records.get(i).getName()) {
+                 foundRecordPosition = i;
             }
-            recordPosition--;
+        }
+        return foundRecordPosition+1;
+    }
+
+    public int loadRecord(String recordTitle) {
+        int recordListSize = this.records.size();
+        int foundRecordPosition = 0;
+        for (int i = 0; i < recordListSize ; i++) {
+
+            if (recordTitle == this.records.get(i).getName()) {
+                foundRecordPosition = i;
+            }
         }
         return foundRecordPosition;
     }
