@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Song s1 = new Song(3.4);
-        Song s2 = new Song(4.2);
-        Song s3 = new Song(2.5);
+        Song s1 = new Song(3.4, "Watermelonsugar");
+        Song s2 = new Song(4.2, "Look who's crying now");
+        Song s3 = new Song(2.5, "Fight Back");
 
         System.out.println(s1.getLength());
 
@@ -43,11 +43,17 @@ public class Main {
 
         System.out.println(mag.searchRecord("Red"));
 
-        Box box = new Box("coole Box", mag);
+        Player player = new Player(mag);
+
+        Box box = new Box("coole Box", mag, player);
         box.getMagazine();
         box.getSumOfMusic();
         box.searchRecord("Butter");
-        box.play("Red");
+
+        //box.loadRecord("Red");
+
+        box.play(1);
+
 
 
 
