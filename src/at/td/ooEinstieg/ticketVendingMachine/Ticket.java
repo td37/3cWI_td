@@ -4,24 +4,34 @@ import java.util.Date;
 
 public class Ticket {
     private int id;
-    private Date startTime;
-    private Date endTime;
+    private long startTime;
+    private long endTime;
+    Date createDate = new Date();
 
     public Ticket(int id) {
         this.id = id;
-        this.startTime = new Date();
-        this.endTime = new Date();
+        this.startTime = createDate.getTime();
+        this.endTime = endTime;
+        this.createDate = createDate;
     }
 
     public int getId() {
         return id;
     }
 
-    public Date getStartTime() {
+    public long getStartTime() {
         return startTime;
     }
 
-    public Date getEndTime() {
+    public long getEndTime() {
         return endTime;
+    }
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setEndTime(long endTime) {
+        this.endTime = endTime;
     }
 }

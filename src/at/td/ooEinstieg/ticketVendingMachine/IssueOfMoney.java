@@ -1,17 +1,16 @@
 package at.td.ooEinstieg.ticketVendingMachine;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class IssueOfMoney {
     private double change;
+    private Controller controller;
 
-    public int loadRecord(String recordTitle) {
-        int recordListSize = this.records.size();
-        int foundRecordPosition = 0;
-        for (int i = 0; i < recordListSize ; i++) {
-
-            if (recordTitle == this.records.get(i).getName()) {
-                foundRecordPosition = i;
-            }
-        }
-        return foundRecordPosition;
+    public IssueOfMoney(Controller controller) {
+        this.change = change;
+        this.controller = controller;
     }
+
+
 }
