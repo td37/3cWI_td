@@ -3,6 +3,7 @@ package at.td.ooEinstieg.ticketVendingMachine;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Automaton {
     private Controller controller;
@@ -23,7 +24,7 @@ public class Automaton {
         this.controller.addTicket(ticket);
     }
 
-    public int insertTicket(int ticketId){
+    public int insertTicket(int ticketId) {
         this.inserted = true;
         this.insertedTicket = ticketId;
         return this.insertedTicket;
@@ -31,20 +32,61 @@ public class Automaton {
 
     public void getPrice() {
         try {
-            Thread.sleep(100);
+            Thread.sleep(10000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        if(this.isInserted()) {
+        if (this.isInserted()) {
             Date endDate = new Date();
             this.controller.getTickets().get(this.getInsertedTicket()).setEndTime(endDate.getTime());
-            long timeDiffMilli = this.controller.getTickets().get(this.getInsertedTicket()).getEndTime() - this.controller.getTickets().get(this.getInsertedTicket()).getStartTime();
-            long timeDiffMin  = (timeDiffMilli / 1000)%60;
-            System.out.println(timeDiffMin);
-        }
-        else {
+            double timeDiffMilli = this.controller.getTickets().get(this.getInsertedTicket()).getEndTime() - this.controller.getTickets().get(this.getInsertedTicket()).getStartTime();
+            double timeDiffSec = (timeDiffMilli / 1000);
+            double price = timeDiffSec;
+            System.out.println("Du musst " + timeDiffSec + "€ bezahlen.");
+        } else {
             System.out.println("Es wurde kein Ticket eingelegt.");
         }
+    }
+
+    public void insertMoney() {
+        try {
+            Thread.sleep(11542);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Scanner scanner = new Scanner(System.in);
+        boolean enoughMoney = true;
+
+        if (this.isInserted()) {
+            Date endDate = new Date();
+            this.controller.getTickets().get(this.getInsertedTicket()).setEndTime(endDate.getTime());
+            double timeDiffMilli = this.controller.getTickets().get(this.getInsertedTicket()).getEndTime() - this.controller.getTickets().get(this.getInsertedTicket()).getStartTime();
+            double timeDiffSec = (timeDiffMilli / 1000);
+            double price = timeDiffSec;
+
+            System.out.println("Sie müssen " + price + "€ bezahlen. Bitte geben Sie ihr Geld ein.");
+
+
+            while (enoughMoney) {
+                double insertedMoney = scanner.nextDouble();
+                double change = insertedMoney - price;
+                this.issueOfMoney.setChange(change);
+
+                if (insertedMoney >= price) {
+                    System.out.println("Du hast " + insertedMoney + "€ eingegeben. Dein Wechselgeld beträgt " + this.issueOfMoney.getChange() + "€.");
+                    this.controller.getTickets().remove(this.insertedTicket);
+                    enoughMoney = false;
+                } else {
+                    double stillNeededMoney = price - insertedMoney;
+                    System.out.println("Sie haben zu wenig Geld eingegeben. Bitte bezhalen Sie noch " + stillNeededMoney + "€.");
+                }
+
+            }
+        } else {
+            System.out.println("Es wurde kein Ticket eingelegt.");
+        }
+
+
     }
 
     public Controller getController() {

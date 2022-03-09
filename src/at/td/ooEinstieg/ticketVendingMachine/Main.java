@@ -13,7 +13,9 @@ public class Main {
         Automaton automaton = new Automaton(controller, issueOfMoney);
 
         automaton.insertTicket(1);
-        automaton.getPrice();
+        //automaton.getPrice();
+
+        automaton.insertMoney();
 
 
 

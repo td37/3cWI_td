@@ -12,5 +12,15 @@ public class IssueOfMoney {
         this.controller = controller;
     }
 
+    public double getChange() {
+        return change;
+    }
 
+    public void setChange(double change) {
+        this.change = change;
+    }
+
+    public Controller getController() {
+        return controller;
+    }
 }
